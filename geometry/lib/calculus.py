@@ -8,6 +8,7 @@ class Quick_hull:
 	def get_convex_hull(self, points):
 		if len(points) < 3:
 			return []
+			
 		result = []
 
 		extremes = self.__get_endings(points)
@@ -54,6 +55,7 @@ class Quick_hull:
 				right = p
 		return { 'left': left, 'right': right }
 
+
 	# Add candidates to the output list if they are not already in it
 	def __add_extremes(self, p1, p2, points):
 		if p1 not in points:
@@ -61,15 +63,18 @@ class Quick_hull:
 		if p2 not in points:
 			points.append(p2)
 
+
 	# Return 1 if p is above p1 and p2, 0 if it's collinear and -1 if it's below 
 	def __get_side(self, p1, p2, p):
 		val = self.__area2(p1, p2, p)
 		return val and 1 - 2 * (val < 0)
 
+
 	# Calculate double of the area between p1, p2 and p 
 	def __area2(self, p1, p2, p):
 		return (p.y - p1.y) * (p2.x - p1.x) - \
 			(p2.y - p1.y) * (p.x - p1.x)
+
 
 	# Sort a group of points by the angle between each one and a given point
 	def __sort_by_angle(self, points, init_point):

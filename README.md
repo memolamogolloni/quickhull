@@ -20,3 +20,10 @@ pip3 install -r requirements.txt
 * Look for farthest points in each group and add them to the result.
 * Make a triangle from the two initial points and the farthest point just found. Discard the line that connects the initial points and repeat recursively the process from the step before with the leaving ones.
 * Stop recursion when there's no points farther than the ones on any of the two lines.
+
+
+
+
+
+---
+PS: maybe quite over-engineered by now, just sketching an architecture for a forthcoming micro-library.

@@ -1,5 +1,5 @@
 import pygame
-from geometry.shapes import *
+from geometry import Point, Polygon
 
 
 
@@ -57,7 +57,6 @@ class Canvas:
 
 
 	#  -------------------------------- Drawing utils ----------------------------------
-
 	def __fill_background(self, color):
 		self.screen.fill(color)
 
